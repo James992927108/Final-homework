@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:background="@drawable/backgroundtest3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:onClick="start"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="325dp"
+        android:layout_height="59dp"
+        android:text="Tree will grow up in"
+        android:id="@+id/showtext"
+        android:layout_gravity="center_horizontal"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:text="      " />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:background="#00000000"
+            android:id="@+id/btnStart"
+            android:layout_gravity="center_horizontal"
+            android:textSize="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:text="           " />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHOP"
+            android:background="#00000000"
+            android:id="@+id/btnshop"
+            android:layout_gravity="center_horizontal"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:scrollingCache="false"
+        android:textFilterEnabled="false"
+        android:theme="@style/AppTheme"
+        android:transitionGroup="false"
+        android:layout_weight="1" />
+
+</LinearLayout>
