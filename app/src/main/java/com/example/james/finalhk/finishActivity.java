@@ -11,18 +11,7 @@ import android.content.SharedPreferences;
 
 
 public class finishActivity extends Activity {
-    /*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    *
-    * */
+
     private Button mBtnback;
     private TextView mMoney;
     private ImageView mten;
