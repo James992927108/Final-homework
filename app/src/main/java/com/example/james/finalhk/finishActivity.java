@@ -11,6 +11,18 @@ import android.content.SharedPreferences;
 
 
 public class finishActivity extends Activity {
+    /*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
     private Button mBtnback;
     private TextView mMoney;
     private ImageView mten;
@@ -37,28 +49,28 @@ public class finishActivity extends Activity {
     };
 
     private void Moneyresult() {
-        SharedPreferences savetotalmoney = getSharedPreferences("totalmoney", MODE_PRIVATE);//³ÐÀÉ
-        SharedPreferences.Editor savetotalmoneyEdt = savetotalmoney.edit();//¦sÀÉª«¥ó
+        SharedPreferences savetotalmoney = getSharedPreferences("totalmoney", MODE_PRIVATE);//ï¿½ï¿½ï¿½ï¿½
+        SharedPreferences.Editor savetotalmoneyEdt = savetotalmoney.edit();//ï¿½sï¿½Éªï¿½ï¿½ï¿½
 
-        SharedPreferences savei = getSharedPreferences("i", MODE_PRIVATE);//³ÐÀÉ
-        SharedPreferences.Editor saveiEdt = savei.edit();//¦sÀÉª«¥ó
+        SharedPreferences savei = getSharedPreferences("i", MODE_PRIVATE);//ï¿½ï¿½ï¿½ï¿½
+        SharedPreferences.Editor saveiEdt = savei.edit();//ï¿½sï¿½Éªï¿½ï¿½ï¿½
 
-        i = savei .getInt("i",i);//ÅªÀÉ
+        i = savei .getInt("i",i);//Åªï¿½ï¿½
 
-        // ±q Bundle ª«¥ó¤¤¨ú¥X¸ê®Æ
+        // ï¿½q Bundle ï¿½ï¿½ï¿½ó¤¤¨ï¿½Xï¿½ï¿½ï¿½
         Bundle bundle = getIntent().getExtras();
         long imoney = bundle.getLong("KEY_Money");
         if(i==0){
-            totalmoney = imoney ;//¥[¤W¨C¦¸ªº®É¶¡¦s¨ìtotalmoney
-            savetotalmoneyEdt.putString("totalmoney", Long.toString(totalmoney)).commit();//¦sÀÉ
+            totalmoney = imoney ;//ï¿½[ï¿½Wï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½sï¿½ï¿½totalmoney
+            savetotalmoneyEdt.putString("totalmoney", Long.toString(totalmoney)).commit();//ï¿½sï¿½ï¿½
             i=1;
-            saveiEdt.putInt("i", i).commit();//¦sÀÉ
+            saveiEdt.putInt("i", i).commit();//ï¿½sï¿½ï¿½
         }
         else {
-            gettotalmoney = savetotalmoney.getString("totalmoney", "");//ÅªÀÉ
-            totalmoney = Integer.parseInt(gettotalmoney);//stringÂàint
-            totalmoney = totalmoney + imoney;//¥[¤W¨C¦¸ªº®É¶¡¦s¨ìtotalmoney
-            savetotalmoneyEdt.putString("totalmoney", Long.toString(totalmoney)).commit();//¦sÀÉ
+            gettotalmoney = savetotalmoney.getString("totalmoney", "");//Åªï¿½ï¿½
+            totalmoney = Integer.parseInt(gettotalmoney);//stringï¿½ï¿½int
+            totalmoney = totalmoney + imoney;//ï¿½[ï¿½Wï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½sï¿½ï¿½totalmoney
+            savetotalmoneyEdt.putString("totalmoney", Long.toString(totalmoney)).commit();//ï¿½sï¿½ï¿½
         }
         String s = "Remain :" + Long.toString(totalmoney) + "    Earn : " + Long.toString(imoney);
         mMoney.setText(s);
